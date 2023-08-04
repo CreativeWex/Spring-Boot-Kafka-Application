@@ -15,6 +15,8 @@ public class KafkaTopicConfig {
 
     @Bean
     public NewTopic testTopic() {
-        return TopicBuilder.name("messageTopic").build();
+        return TopicBuilder.name("messageTopic")
+                // .partitions() - Количество партиций, которое будет у топика
+                .build();
     }
 }
